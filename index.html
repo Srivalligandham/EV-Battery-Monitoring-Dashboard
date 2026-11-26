@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EV Battery Monitoring Research Dashboard</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b1220;color:#e5e7eb;font-family:Arial,sans-serif}
+header{padding:38px 5%;background:linear-gradient(120deg,#14243b,#102e35)}
+header h1{margin:0;font-size:30px;color:#fff}
+header p{color:#a8bacd;letter-spacing:1px}
+nav{position:sticky;top:0;background:#111c2d;padding:14px 5%;z-index:5;display:flex;gap:22px;flex-wrap:wrap;border-bottom:1px solid #334155}
+nav a{color:#93c5fd;text-decoration:none;font-size:13px}
+main{max-width:1400px;margin:auto;padding:25px 4%}
+section{margin:30px 0;padding:24px;background:#111c2d;border:1px solid #29384d;border-radius:14px}
+h2{margin-top:0;color:#f8fafc}
+h3{color:#cbd5e1}
+.muted{color:#94a3b8;font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+.metric{background:#19283d;border:1px solid #34465e;border-radius:10px;padding:18px}
+.metric strong{display:block;font-size:27px;color:#34d399;margin-bottom:7px}
+.metric span{font-size:12px;color:#aab9ca}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.chart{background:#19283d;border:1px solid #34465e;border-radius:10px;padding:12px;min-width:0}
+.chart img{width:100%;height:auto;display:block;border-radius:6px}
+.chart p{margin:10px 4px 3px;font-size:13px;color:#cbd5e1}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12px;white-space:nowrap}
+th,td{padding:11px 10px;text-align:left;border-bottom:1px solid #334155}
+th{background:#1b2b42;color:#93c5fd}
+tr:hover{background:#1b2b42}
+ul{line-height:1.9}
+.tag{display:inline-block;background:#064e3b;color:#a7f3d0;padding:6px 10px;border-radius:20px;font-size:12px}
+footer{text-align:center;color:#64748b;padding:25px;font-size:12px}
+@media(max-width:600px){header h1{font-size:23px}section{padding:15px}}
+@media print{body{background:white;color:#111}section{break-inside:avoid;background:white;color:#111;border:1px solid #bbb}nav{display:none}.metric,.chart{background:white;color:#111}.metric strong{color:#047857}}
+</style>
+</head>
+<body>
+<header>
+<h1>EV BATTERY MONITORING SYSTEM</h1>
+<p>VERSION 1 vs VERSION 2 | RESEARCH RESULTS DASHBOARD</p>
+<span class="tag">QEMU FIRMWARE EXECUTION COMPLETED</span>
+</header>
+<nav>
+<a href="#overview">Overview</a><a href="#v1">Version 1 Output</a>
+<a href="#v2">Version 2 Output</a><a href="#graphs1">Version 1 Graphs</a>
+<a href="#graphs2">Version 2 Graphs</a><a href="#comparison">Comparison</a>
+<a href="#conclusion">Conclusion</a>
+</nav>
+<main>
+<section id="overview">
+<h2>Research Overview</h2>
+<div class="cards">
+<div class="metric"><strong>8</strong><span>Version 1 samples</span></div>
+<div class="metric"><strong>12</strong><span>Version 2 samples</span></div>
+<div class="metric"><strong>100 %</strong><span>Version 1 final SOC</span></div>
+<div class="metric"><strong>47 %</strong><span>Version 2 final SOC</span></div>
+<div class="metric"><strong>96 %</strong><span>Version 1 final SOH</span></div>
+<div class="metric"><strong>90 %</strong><span>Version 2 final SOH</span></div>
+</div>
+<p class="muted">Both versions were executed as ARM Cortex-M4 firmware simulations in QEMU. The inputs are predefined simulated battery samples.</p>
+</section>
+
+<section id="v1">
+<h2>01. Version 1 — Complete Output</h2>
+<p class="muted">Original adaptive battery health monitoring system · 8 samples</p>
+<div class="cards">
+<div class="metric"><strong>8</strong><span>Total samples</span></div>
+<div class="metric"><strong>100 %</strong><span>Final SOC</span></div>
+<div class="metric"><strong>96 %</strong><span>Final SOH</span></div>
+<div class="metric"><strong>10 / 2</strong><span>Monitoring intervals</span></div>
+</div>
+<h3>Sample-by-sample output</h3>
+
+    <div class="table-wrap"><table>
+    <thead><tr>
+    <th>Sample</th><th>Time</th><th>Voltage</th><th>Current</th>
+    <th>Temp.</th><th>SOC</th><th>SOH</th><th>Warning</th>
+    <th>Fault</th><th>Risk</th><th>Interval</th>
+    </tr></thead><tbody>
+        <tr>
+        <td>1</td><td>0</td>
+        <td>48</td><td>12</td>
+        <td>32</td><td>53%</td>
+        <td>96%</td><td>NO WARNING</td>
+        <td>NO FAULT</td><td>Not calculated</td>
+        <td>10</td>
+        </tr>
+        <tr>
+        <td>2</td><td>10</td>
+        <td>46</td><td>12</td>
+        <td>35</td><td>40%</td>
+        <td>96%</td><td>TEMPERATURE RISE DETECTED</td>
+        <td>NO FAULT</td><td>Not calculated</td>
+        <td>2</td>
+        </tr>
+        <tr>
+        <td>3</td><td>12</td>
+        <td>47</td><td>12</td>
+        <td>34</td><td>46%</td>
+        <td>96%</td><td>NO WARNING</td>
+        <td>NO FAULT</td><td>Not calculated</td>
+        <td>10</td>
+        </tr>
+        <tr>
+        <td>4</td><td>22</td>
+        <td>46</td><td>12</td>
+        <td>65</td><td>40%</td>
+        <td>96%</td><td>TEMPERATURE RISE DETECTED</td>
+        <td>OVER TEMPERATURE</td><td>Not calculated</td>
+        <td>2</td>
+        </tr>
+        <tr>
+        <td>5</td><td>24</td>
+        <td>48</td><td>12</td>
+        <td>32</td><td>53%</td>
+        <td>96%</td><td>NO WARNING</td>
+        <td>NO FAULT</td><td>Not calculated</td>
+        <td>10</td>
+        </tr>
+        <tr>
+        <td>6</td><td>34</td>
+        <td>30</td><td>12</td>
+        <td>32</td><td>0%</td>
+        <td>96%</td><td>VOLTAGE DROP DETECTED</td>
+        <td>UNDER VOLTAGE</td><td>Not calculated</td>
+        <td>2</td>
+        </tr>
+        <tr>
+        <td>7</td><td>36</td>
+        <td>48</td><td>30</td>
+        <td>32</td><td>53%</td>
+        <td>96%</td><td>NO WARNING</td>
+        <td>OVER CURRENT</td><td>Not calculated</td>
+        <td>2</td>
+        </tr>
+        <tr>
+        <td>8</td><td>38</td>
+        <td>60</td><td>12</td>
+        <td>32</td><td>100%</td>
+        <td>96%</td><td>NO WARNING</td>
+        <td>OVER VOLTAGE</td><td>Not calculated</td>
+        <td>2</td>
+        </tr></tbody></table></div>
+    
+</section>
+
+<section id="v2">
+<h2>02. Version 2 — Complete Output</h2>
+<p class="muted">Risk-aware and noise-resilient battery monitoring system · 12 samples</p>
+<div class="cards">
+<div class="metric"><strong>12</strong><span>Total samples</span></div>
+<div class="metric"><strong>47 %</strong><span>Final SOC</span></div>
+<div class="metric"><strong>90 %</strong><span>Final SOH</span></div>
+<div class="metric"><strong>10 / 5 / 2 / 1</strong><span>Monitoring intervals</span></div>
+</div>
+<h3>Sample-by-sample output</h3>
+
+    <div class="table-wrap"><table>
+    <thead><tr>
+    <th>Sample</th><th>Time</th><th>Voltage</th><th>Current</th>
+    <th>Temp.</th><th>SOC</th><th>SOH</th><th>Warning</th>
+    <th>Fault</th><th>Risk</th><th>Interval</th>
+    </tr></thead><tbody>
+        <tr>
+        <td>1</td><td>0</td>
+        <td>48</td><td>12</td>
+        <td>32</td><td>80%</td>
+        <td>96%</td><td>NO WARNING</td>
+        <td>NO FAULT</td><td>LOW</td>
+        <td>10</td>
+        </tr>
+        <tr>
+        <td>2</td><td>10</td>
+        <td>47</td><td>12</td>
+        <td>33</td><td>76%</td>
+        <td>96%</td><td>NO WARNING</td>
+        <td>NO FAULT</td><td>LOW</td>
+        <td>10</td>
+        </tr>
+        <tr>
+        <td>3</td><td>20</td>
+        <td>47</td><td>13</td>
+        <td>35</td><td>72%</td>
+        <td>96%</td><td>NO WARNING</td>
+        <td>NO FAULT</td><td>LOW</td>
+        <td>10</td>
+        </tr>
+        <tr>
+        <td>4</td><td>30</td>
+        <td>46</td><td>12</td>
+        <td>36</td><td>68%</td>
+        <td>94%</td><td>NO WARNING</td>
+        <td>NO FAULT</td><td>LOW</td>
+        <td>10</td>
+        </tr>
+        <tr>
+        <td>5</td><td>40</td>
+        <td>46</td><td>12</td>
+        <td>38</td><td>64%</td>
+        <td>94%</td><td>NO WARNING</td>
+        <td>NO FAULT</td><td>LOW</td>
+        <td>10</td>
+        </tr>
+        <tr>
+        <td>6</td><td>50</td>
+        <td>48</td><td>12</td>
+        <td>40</td><td>60%</td>
+        <td>94%</td><td>NO WARNING</td>
+        <td>NO FAULT</td><td>LOW</td>
+        <td>10</td>
+        </tr>
+        <tr>
+        <td>7</td><td>60</td>
+        <td>45</td><td>15</td>
+        <td>42</td><td>55%</td>
+        <td>92%</td><td>VOLTAGE DROP</td>
+        <td>NO FAULT</td><td>MODERATE</td>
+        <td>5</td>
+        </tr>
+        <tr>
+        <td>8</td><td>65</td>
+        <td>44</td><td>18</td>
+        <td>45</td><td>52%</td>
+        <td>92%</td><td>TEMPERATURE RISE</td>
+        <td>NO FAULT</td><td>MODERATE</td>
+        <td>5</td>
+        </tr>
+        <tr>
+        <td>9</td><td>70</td>
+        <td>42</td><td>20</td>
+        <td>50</td><td>49%</td>
+        <td>92%</td><td>VOLTAGE DROP</td>
+        <td>NO FAULT</td><td>HIGH</td>
+        <td>2</td>
+        </tr>
+        <tr>
+        <td>10</td><td>72</td>
+        <td>38</td><td>12</td>
+        <td>65</td><td>48%</td>
+        <td>90%</td><td>VOLTAGE DROP</td>
+        <td>UNDER VOLTAGE</td><td>CRITICAL</td>
+        <td>1</td>
+        </tr>
+        <tr>
+        <td>11</td><td>73</td>
+        <td>48</td><td>30</td>
+        <td>32</td><td>47%</td>
+        <td>90%</td><td>NO WARNING</td>
+        <td>OVER CURRENT</td><td>CRITICAL</td>
+        <td>1</td>
+        </tr>
+        <tr>
+        <td>12</td><td>74</td>
+        <td>60</td><td>12</td>
+        <td>32</td><td>47%</td>
+        <td>90%</td><td>NO WARNING</td>
+        <td>OVER VOLTAGE</td><td>CRITICAL</td>
+        <td>1</td>
+        </tr></tbody></table></div>
+    
+</section>
+
+<section id="graphs1">
+<h2>03. Version 1 — Graphs of All Samples</h2>
+<div class="grid"><div class="chart"><img src="graphs/v1_voltage.png" alt="Voltage"><p>Voltage</p></div><div class="chart"><img src="graphs/v1_current.png" alt="Current"><p>Current</p></div><div class="chart"><img src="graphs/v1_temperature.png" alt="Temperature"><p>Temperature</p></div><div class="chart"><img src="graphs/v1_soc.png" alt="SOC"><p>SOC</p></div><div class="chart"><img src="graphs/v1_soh.png" alt="SOH"><p>SOH</p></div></div>
+</section>
+
+<section id="graphs2">
+<h2>04. Version 2 — Graphs of All Samples</h2>
+<div class="grid"><div class="chart"><img src="graphs/v2_voltage.png" alt="Voltage"><p>Voltage</p></div><div class="chart"><img src="graphs/v2_current.png" alt="Current"><p>Current</p></div><div class="chart"><img src="graphs/v2_temperature.png" alt="Temperature"><p>Temperature</p></div><div class="chart"><img src="graphs/v2_soc.png" alt="SOC"><p>SOC</p></div><div class="chart"><img src="graphs/v2_soh.png" alt="SOH"><p>SOH</p></div><div class="chart"><img src="graphs/v2_risk.png" alt="Risk score"><p>Risk score</p></div><div class="chart"><img src="graphs/v2_intervals.png" alt="Monitoring interval"><p>Monitoring interval</p></div></div>
+</section>
+
+<section id="comparison">
+<h2>05. Version 1 vs Version 2</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Feature</th><th>Version 1</th><th>Version 2</th></tr></thead>
+<tbody>
+<tr><td>Samples</td><td>8</td><td>12</td></tr>
+<tr><td>SOC estimation</td><td>Voltage-based</td><td>Coulomb counting</td></tr>
+<tr><td>SOH estimation</td><td>Fixed 96%</td><td>Capacity-based</td></tr>
+<tr><td>Risk score</td><td>Not implemented</td><td>Implemented</td></tr>
+<tr><td>Risk levels</td><td>Not classified</td><td>Low, Moderate, High, Critical</td></tr>
+<tr><td>Monitoring intervals</td><td>10 and 2</td><td>10, 5, 2 and 1</td></tr>
+<tr><td>Median noise filter</td><td>Not implemented</td><td>Implemented in simulation</td></tr>
+<tr><td>Execution platform</td><td>ARM Cortex-M4 / QEMU</td><td>ARM Cortex-M4 / QEMU</td></tr>
+</tbody></table></div>
+<h3>Comparison graphs</h3>
+<div class="grid"><div class="chart"><img src="graphs/compare_voltage.png" alt="Voltage comparison"><p>Voltage comparison</p></div><div class="chart"><img src="graphs/compare_current.png" alt="Current comparison"><p>Current comparison</p></div><div class="chart"><img src="graphs/compare_temperature.png" alt="Temperature comparison"><p>Temperature comparison</p></div><div class="chart"><img src="graphs/compare_soc.png" alt="SOC comparison"><p>SOC comparison</p></div><div class="chart"><img src="graphs/compare_soh.png" alt="SOH comparison"><p>SOH comparison</p></div></div>
+</section>
+
+
+<section id="conclusion">
+<h2>06. Conclusion</h2>
+<p>
+The Version 1 battery monitoring system successfully monitors battery
+voltage, current, temperature, SOC and SOH using ARM Cortex-M4 firmware
+in QEMU.
+</p>
+<p>
+Version 2 improves the monitoring approach by introducing Coulomb
+counting for SOC estimation, capacity-based SOH estimation, median-of-three
+noise filtering, numerical risk scoring and four-level risk classification.
+It also uses adaptive monitoring intervals based on the calculated risk.
+</p>
+<p>
+The simulation results demonstrate the additional monitoring features
+implemented in Version 2. All results are based on predefined simulated
+battery samples executed in QEMU.
+</p>
+<p>
+<strong>Overall:</strong> Version 2 provides a more detailed and
+risk-aware battery monitoring approach compared with Version 1.
+</p>
+</section>
+
+</main>
+<footer>EV Battery Monitoring Research Dashboard · Generated from project output files</footer>
+</body>
+</html>
