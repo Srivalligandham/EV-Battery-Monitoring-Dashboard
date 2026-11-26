@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,13 +44,19 @@ footer{text-align:center;color:#64748b;padding:25px;font-size:12px}
 <p>VERSION 1 vs VERSION 2 | RESEARCH RESULTS DASHBOARD</p>
 <span class="tag">QEMU FIRMWARE EXECUTION COMPLETED</span>
 </header>
+
 <nav>
-<a href="#overview">Overview</a><a href="#v1">Version 1 Output</a>
-<a href="#v2">Version 2 Output</a><a href="#graphs1">Version 1 Graphs</a>
-<a href="#graphs2">Version 2 Graphs</a><a href="#comparison">Comparison</a>
+<a href="#overview">Overview</a>
+<a href="#v1">Version 1 Output</a>
+<a href="#v2">Version 2 Output</a>
+<a href="#graphs1">Version 1 Graphs</a>
+<a href="#graphs2">Version 2 Graphs</a>
+<a href="#comparison">Comparison</a>
 <a href="#conclusion">Conclusion</a>
 </nav>
+
 <main>
+
 <section id="overview">
 <h2>Research Overview</h2>
 <div class="cards">
@@ -73,78 +80,27 @@ footer{text-align:center;color:#64748b;padding:25px;font-size:12px}
 <div class="metric"><strong>10 / 2</strong><span>Monitoring intervals</span></div>
 </div>
 <h3>Sample-by-sample output</h3>
-
-    <div class="table-wrap"><table>
-    <thead><tr>
-    <th>Sample</th><th>Time</th><th>Voltage</th><th>Current</th>
-    <th>Temp.</th><th>SOC</th><th>SOH</th><th>Warning</th>
-    <th>Fault</th><th>Risk</th><th>Interval</th>
-    </tr></thead><tbody>
-        <tr>
-        <td>1</td><td>0</td>
-        <td>48</td><td>12</td>
-        <td>32</td><td>53%</td>
-        <td>96%</td><td>NO WARNING</td>
-        <td>NO FAULT</td><td>Not calculated</td>
-        <td>10</td>
-        </tr>
-        <tr>
-        <td>2</td><td>10</td>
-        <td>46</td><td>12</td>
-        <td>35</td><td>40%</td>
-        <td>96%</td><td>TEMPERATURE RISE DETECTED</td>
-        <td>NO FAULT</td><td>Not calculated</td>
-        <td>2</td>
-        </tr>
-        <tr>
-        <td>3</td><td>12</td>
-        <td>47</td><td>12</td>
-        <td>34</td><td>46%</td>
-        <td>96%</td><td>NO WARNING</td>
-        <td>NO FAULT</td><td>Not calculated</td>
-        <td>10</td>
-        </tr>
-        <tr>
-        <td>4</td><td>22</td>
-        <td>46</td><td>12</td>
-        <td>65</td><td>40%</td>
-        <td>96%</td><td>TEMPERATURE RISE DETECTED</td>
-        <td>OVER TEMPERATURE</td><td>Not calculated</td>
-        <td>2</td>
-        </tr>
-        <tr>
-        <td>5</td><td>24</td>
-        <td>48</td><td>12</td>
-        <td>32</td><td>53%</td>
-        <td>96%</td><td>NO WARNING</td>
-        <td>NO FAULT</td><td>Not calculated</td>
-        <td>10</td>
-        </tr>
-        <tr>
-        <td>6</td><td>34</td>
-        <td>30</td><td>12</td>
-        <td>32</td><td>0%</td>
-        <td>96%</td><td>VOLTAGE DROP DETECTED</td>
-        <td>UNDER VOLTAGE</td><td>Not calculated</td>
-        <td>2</td>
-        </tr>
-        <tr>
-        <td>7</td><td>36</td>
-        <td>48</td><td>30</td>
-        <td>32</td><td>53%</td>
-        <td>96%</td><td>NO WARNING</td>
-        <td>OVER CURRENT</td><td>Not calculated</td>
-        <td>2</td>
-        </tr>
-        <tr>
-        <td>8</td><td>38</td>
-        <td>60</td><td>12</td>
-        <td>32</td><td>100%</td>
-        <td>96%</td><td>NO WARNING</td>
-        <td>OVER VOLTAGE</td><td>Not calculated</td>
-        <td>2</td>
-        </tr></tbody></table></div>
-    
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Sample</th><th>Time</th><th>Voltage</th><th>Current</th>
+<th>Temp.</th><th>SOC</th><th>SOH</th><th>Warning</th>
+<th>Fault</th><th>Risk</th><th>Interval</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>0</td><td>48</td><td>12</td><td>32</td><td>53%</td><td>96%</td><td>NO WARNING</td><td>NO FAULT</td><td>Not calculated</td><td>10</td></tr>
+<tr><td>2</td><td>10</td><td>46</td><td>12</td><td>35</td><td>40%</td><td>96%</td><td>TEMPERATURE RISE DETECTED</td><td>NO FAULT</td><td>Not calculated</td><td>2</td></tr>
+<tr><td>3</td><td>12</td><td>47</td><td>12</td><td>34</td><td>46%</td><td>96%</td><td>NO WARNING</td><td>NO FAULT</td><td>Not calculated</td><td>10</td></tr>
+<tr><td>4</td><td>22</td><td>46</td><td>12</td><td>65</td><td>40%</td><td>96%</td><td>TEMPERATURE RISE DETECTED</td><td>OVER TEMPERATURE</td><td>Not calculated</td><td>2</td></tr>
+<tr><td>5</td><td>24</td><td>48</td><td>12</td><td>32</td><td>53%</td><td>96%</td><td>NO WARNING</td><td>NO FAULT</td><td>Not calculated</td><td>10</td></tr>
+<tr><td>6</td><td>34</td><td>30</td><td>12</td><td>32</td><td>0%</td><td>96%</td><td>VOLTAGE DROP DETECTED</td><td>UNDER VOLTAGE</td><td>Not calculated</td><td>2</td></tr>
+<tr><td>7</td><td>36</td><td>48</td><td>30</td><td>32</td><td>53%</td><td>96%</td><td>NO WARNING</td><td>OVER CURRENT</td><td>Not calculated</td><td>2</td></tr>
+<tr><td>8</td><td>38</td><td>60</td><td>12</td><td>32</td><td>100%</td><td>96%</td><td>NO WARNING</td><td>OVER VOLTAGE</td><td>Not calculated</td><td>2</td></tr>
+</tbody>
+</table>
+</div>
 </section>
 
 <section id="v2">
@@ -157,125 +113,61 @@ footer{text-align:center;color:#64748b;padding:25px;font-size:12px}
 <div class="metric"><strong>10 / 5 / 2 / 1</strong><span>Monitoring intervals</span></div>
 </div>
 <h3>Sample-by-sample output</h3>
-
-    <div class="table-wrap"><table>
-    <thead><tr>
-    <th>Sample</th><th>Time</th><th>Voltage</th><th>Current</th>
-    <th>Temp.</th><th>SOC</th><th>SOH</th><th>Warning</th>
-    <th>Fault</th><th>Risk</th><th>Interval</th>
-    </tr></thead><tbody>
-        <tr>
-        <td>1</td><td>0</td>
-        <td>48</td><td>12</td>
-        <td>32</td><td>80%</td>
-        <td>96%</td><td>NO WARNING</td>
-        <td>NO FAULT</td><td>LOW</td>
-        <td>10</td>
-        </tr>
-        <tr>
-        <td>2</td><td>10</td>
-        <td>47</td><td>12</td>
-        <td>33</td><td>76%</td>
-        <td>96%</td><td>NO WARNING</td>
-        <td>NO FAULT</td><td>LOW</td>
-        <td>10</td>
-        </tr>
-        <tr>
-        <td>3</td><td>20</td>
-        <td>47</td><td>13</td>
-        <td>35</td><td>72%</td>
-        <td>96%</td><td>NO WARNING</td>
-        <td>NO FAULT</td><td>LOW</td>
-        <td>10</td>
-        </tr>
-        <tr>
-        <td>4</td><td>30</td>
-        <td>46</td><td>12</td>
-        <td>36</td><td>68%</td>
-        <td>94%</td><td>NO WARNING</td>
-        <td>NO FAULT</td><td>LOW</td>
-        <td>10</td>
-        </tr>
-        <tr>
-        <td>5</td><td>40</td>
-        <td>46</td><td>12</td>
-        <td>38</td><td>64%</td>
-        <td>94%</td><td>NO WARNING</td>
-        <td>NO FAULT</td><td>LOW</td>
-        <td>10</td>
-        </tr>
-        <tr>
-        <td>6</td><td>50</td>
-        <td>48</td><td>12</td>
-        <td>40</td><td>60%</td>
-        <td>94%</td><td>NO WARNING</td>
-        <td>NO FAULT</td><td>LOW</td>
-        <td>10</td>
-        </tr>
-        <tr>
-        <td>7</td><td>60</td>
-        <td>45</td><td>15</td>
-        <td>42</td><td>55%</td>
-        <td>92%</td><td>VOLTAGE DROP</td>
-        <td>NO FAULT</td><td>MODERATE</td>
-        <td>5</td>
-        </tr>
-        <tr>
-        <td>8</td><td>65</td>
-        <td>44</td><td>18</td>
-        <td>45</td><td>52%</td>
-        <td>92%</td><td>TEMPERATURE RISE</td>
-        <td>NO FAULT</td><td>MODERATE</td>
-        <td>5</td>
-        </tr>
-        <tr>
-        <td>9</td><td>70</td>
-        <td>42</td><td>20</td>
-        <td>50</td><td>49%</td>
-        <td>92%</td><td>VOLTAGE DROP</td>
-        <td>NO FAULT</td><td>HIGH</td>
-        <td>2</td>
-        </tr>
-        <tr>
-        <td>10</td><td>72</td>
-        <td>38</td><td>12</td>
-        <td>65</td><td>48%</td>
-        <td>90%</td><td>VOLTAGE DROP</td>
-        <td>UNDER VOLTAGE</td><td>CRITICAL</td>
-        <td>1</td>
-        </tr>
-        <tr>
-        <td>11</td><td>73</td>
-        <td>48</td><td>30</td>
-        <td>32</td><td>47%</td>
-        <td>90%</td><td>NO WARNING</td>
-        <td>OVER CURRENT</td><td>CRITICAL</td>
-        <td>1</td>
-        </tr>
-        <tr>
-        <td>12</td><td>74</td>
-        <td>60</td><td>12</td>
-        <td>32</td><td>47%</td>
-        <td>90%</td><td>NO WARNING</td>
-        <td>OVER VOLTAGE</td><td>CRITICAL</td>
-        <td>1</td>
-        </tr></tbody></table></div>
-    
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Sample</th><th>Time</th><th>Voltage</th><th>Current</th>
+<th>Temp.</th><th>SOC</th><th>SOH</th><th>Warning</th>
+<th>Fault</th><th>Risk</th><th>Interval</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>0</td><td>48</td><td>12</td><td>32</td><td>80%</td><td>96%</td><td>NO WARNING</td><td>NO FAULT</td><td>LOW</td><td>10</td></tr>
+<tr><td>2</td><td>10</td><td>47</td><td>12</td><td>33</td><td>76%</td><td>96%</td><td>NO WARNING</td><td>NO FAULT</td><td>LOW</td><td>10</td></tr>
+<tr><td>3</td><td>20</td><td>47</td><td>13</td><td>35</td><td>72%</td><td>96%</td><td>NO WARNING</td><td>NO FAULT</td><td>LOW</td><td>10</td></tr>
+<tr><td>4</td><td>30</td><td>46</td><td>12</td><td>36</td><td>68%</td><td>94%</td><td>NO WARNING</td><td>NO FAULT</td><td>LOW</td><td>10</td></tr>
+<tr><td>5</td><td>40</td><td>46</td><td>12</td><td>38</td><td>64%</td><td>94%</td><td>NO WARNING</td><td>NO FAULT</td><td>LOW</td><td>10</td></tr>
+<tr><td>6</td><td>50</td><td>48</td><td>12</td><td>40</td><td>60%</td><td>94%</td><td>NO WARNING</td><td>NO FAULT</td><td>LOW</td><td>10</td></tr>
+<tr><td>7</td><td>60</td><td>45</td><td>15</td><td>42</td><td>55%</td><td>92%</td><td>VOLTAGE DROP</td><td>NO FAULT</td><td>MODERATE</td><td>5</td></tr>
+<tr><td>8</td><td>65</td><td>44</td><td>18</td><td>45</td><td>52%</td><td>92%</td><td>TEMPERATURE RISE</td><td>NO FAULT</td><td>MODERATE</td><td>5</td></tr>
+<tr><td>9</td><td>70</td><td>42</td><td>20</td><td>50</td><td>49%</td><td>92%</td><td>VOLTAGE DROP</td><td>NO FAULT</td><td>HIGH</td><td>2</td></tr>
+<tr><td>10</td><td>72</td><td>38</td><td>12</td><td>65</td><td>48%</td><td>90%</td><td>VOLTAGE DROP</td><td>UNDER VOLTAGE</td><td>CRITICAL</td><td>1</td></tr>
+<tr><td>11</td><td>73</td><td>48</td><td>30</td><td>32</td><td>47%</td><td>90%</td><td>NO WARNING</td><td>OVER CURRENT</td><td>CRITICAL</td><td>1</td></tr>
+<tr><td>12</td><td>74</td><td>60</td><td>12</td><td>32</td><td>47%</td><td>90%</td><td>NO WARNING</td><td>OVER VOLTAGE</td><td>CRITICAL</td><td>1</td></tr>
+</tbody>
+</table>
+</div>
 </section>
 
 <section id="graphs1">
 <h2>03. Version 1 — Graphs of All Samples</h2>
-<div class="grid"><div class="chart"><img src="graphs/v1_voltage.png" alt="Voltage"><p>Voltage</p></div><div class="chart"><img src="graphs/v1_current.png" alt="Current"><p>Current</p></div><div class="chart"><img src="graphs/v1_temperature.png" alt="Temperature"><p>Temperature</p></div><div class="chart"><img src="graphs/v1_soc.png" alt="SOC"><p>SOC</p></div><div class="chart"><img src="graphs/v1_soh.png" alt="SOH"><p>SOH</p></div></div>
+<div class="grid">
+<div class="chart"><img src="v1_voltage.png" alt="Voltage"><p>Voltage</p></div>
+<div class="chart"><img src="v1_current.png" alt="Current"><p>Current</p></div>
+<div class="chart"><img src="v1_temperature.png" alt="Temperature"><p>Temperature</p></div>
+<div class="chart"><img src="v1_soc.png" alt="SOC"><p>SOC</p></div>
+<div class="chart"><img src="v1_soh.png" alt="SOH"><p>SOH</p></div>
+</div>
 </section>
 
 <section id="graphs2">
 <h2>04. Version 2 — Graphs of All Samples</h2>
-<div class="grid"><div class="chart"><img src="graphs/v2_voltage.png" alt="Voltage"><p>Voltage</p></div><div class="chart"><img src="graphs/v2_current.png" alt="Current"><p>Current</p></div><div class="chart"><img src="graphs/v2_temperature.png" alt="Temperature"><p>Temperature</p></div><div class="chart"><img src="graphs/v2_soc.png" alt="SOC"><p>SOC</p></div><div class="chart"><img src="graphs/v2_soh.png" alt="SOH"><p>SOH</p></div><div class="chart"><img src="graphs/v2_risk.png" alt="Risk score"><p>Risk score</p></div><div class="chart"><img src="graphs/v2_intervals.png" alt="Monitoring interval"><p>Monitoring interval</p></div></div>
+<div class="grid">
+<div class="chart"><img src="v2_voltage.png" alt="Voltage"><p>Voltage</p></div>
+<div class="chart"><img src="v2_current.png" alt="Current"><p>Current</p></div>
+<div class="chart"><img src="v2_temperature.png" alt="Temperature"><p>Temperature</p></div>
+<div class="chart"><img src="v2_soc.png" alt="SOC"><p>SOC</p></div>
+<div class="chart"><img src="v2_soh.png" alt="SOH"><p>SOH</p></div>
+<div class="chart"><img src="v2_risk.png" alt="Risk score"><p>Risk score</p></div>
+<div class="chart"><img src="v2_intervals.png" alt="Monitoring interval"><p>Monitoring interval</p></div>
+</div>
 </section>
 
 <section id="comparison">
 <h2>05. Version 1 vs Version 2</h2>
-<div class="table-wrap"><table>
+<div class="table-wrap">
+<table>
 <thead><tr><th>Feature</th><th>Version 1</th><th>Version 2</th></tr></thead>
 <tbody>
 <tr><td>Samples</td><td>8</td><td>12</td></tr>
@@ -286,11 +178,18 @@ footer{text-align:center;color:#64748b;padding:25px;font-size:12px}
 <tr><td>Monitoring intervals</td><td>10 and 2</td><td>10, 5, 2 and 1</td></tr>
 <tr><td>Median noise filter</td><td>Not implemented</td><td>Implemented in simulation</td></tr>
 <tr><td>Execution platform</td><td>ARM Cortex-M4 / QEMU</td><td>ARM Cortex-M4 / QEMU</td></tr>
-</tbody></table></div>
+</tbody>
+</table>
+</div>
 <h3>Comparison graphs</h3>
-<div class="grid"><div class="chart"><img src="graphs/compare_voltage.png" alt="Voltage comparison"><p>Voltage comparison</p></div><div class="chart"><img src="graphs/compare_current.png" alt="Current comparison"><p>Current comparison</p></div><div class="chart"><img src="graphs/compare_temperature.png" alt="Temperature comparison"><p>Temperature comparison</p></div><div class="chart"><img src="graphs/compare_soc.png" alt="SOC comparison"><p>SOC comparison</p></div><div class="chart"><img src="graphs/compare_soh.png" alt="SOH comparison"><p>SOH comparison</p></div></div>
+<div class="grid">
+<div class="chart"><img src="compare_voltage.png" alt="Voltage comparison"><p>Voltage comparison</p></div>
+<div class="chart"><img src="compare_current.png" alt="Current comparison"><p>Current comparison</p></div>
+<div class="chart"><img src="compare_temperature.png" alt="Temperature comparison"><p>Temperature comparison</p></div>
+<div class="chart"><img src="compare_soc.png" alt="SOC comparison"><p>SOC comparison</p></div>
+<div class="chart"><img src="compare_soh.png" alt="SOH comparison"><p>SOH comparison</p></div>
+</div>
 </section>
-
 
 <section id="conclusion">
 <h2>06. Conclusion</h2>
